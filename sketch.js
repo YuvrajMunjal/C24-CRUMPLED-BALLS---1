@@ -43,15 +43,16 @@ function draw() {
   box3.display();	
   paperBall.display();
   ground.display();
-  ForceApplied();
-  console.log(paperBall.x)
-}
-
-function ForceApplied(){
-if(keyCode === UP_ARROW){
-
-	Matter.Body.applyForce(paperBall.body,paperBall.body.position,{x:-5,y:-5});
+  keyPressed();
+  console.log(paperBall.body.position.x)
 }
 
 
-}
+
+
+
+function keyPressed(){
+	if(keyCode === UP_ARROW){
+	
+		Matter.Body.applyForce(paperBall.body,paperBall.body.position,{x:-5,y:-5});
+	}}
