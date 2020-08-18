@@ -43,7 +43,6 @@ function draw() {
   box3.display();	
   paperBall.display();
   ground.display();
-  keyPressed();
   console.log(paperBall.body.position.x)
 }
 
@@ -54,5 +53,5 @@ function draw() {
 function keyPressed(){
 	if(keyCode === UP_ARROW){
 	
-		Matter.Body.applyForce(paperBall.body,paperBall.body.position,{x:-5,y:-5});
+		Matter.Body.applyForce(paperBall.body,paperBall.body.position,{x:130,y:-280});
 	}}
